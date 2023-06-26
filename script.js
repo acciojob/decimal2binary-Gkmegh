@@ -1,10 +1,14 @@
 function decimalToBinary(decimal) {
-let binary = '';
+  if (decimal === 0) {
+    return '0';
+  }
 
-while (decimal > 0) {
-binary = (decimal % 2) + binary;
-decimal = Math.floor(decimal / 2);
-}
+  let binary = '';
 
-return binary;
+  while (decimal > 0) {
+    binary = (decimal % 2) + binary;
+    decimal = Math.floor(decimal / 2);
+  }
+
+  return binary;
 }
